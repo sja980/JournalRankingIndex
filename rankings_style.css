@@ -1,3 +1,11 @@
+.center {text-align: center}
+
+.Top {background-color: #A4F5A4}
+.Great {background-color: #D3F5A4}
+.Good {background-color: #E9F5A4}
+.Ok {background-color: #F5EEA4}
+.Poor {background-color: #F5C5A4}
+
 table.dataTable thead th,
 table.dataTable thead td {
 		padding: 3px 3px;
