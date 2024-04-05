@@ -27,3 +27,22 @@ table.dataTable td {
 border-bottom: 1px solid #CFCFCF
 }
 table.dataTable tr:hover {background-color: #D2D6EA;}
+
+	table.dataTable a:link {
+	color: #3A3A3A;
+	background-color: transparent;
+	text-decoration: none;
+	font-weight: bold
+	}
+
+	table.dataTable a:visited {
+	color: #3A3A3A;
+	background-color: transparent;
+	text-decoration: none;
+	}
+
+	table.dataTable a:hover {
+	color: #858585;
+	background-color: transparent;
+	text-decoration: underline;
+	}
