@@ -1,10 +1,21 @@
 .center {text-align: center}
 
-.Top {background-color: #A4F5A4}
-.Great {background-color: #D3F5A4}
-.Good {background-color: #E9F5A4}
-.Ok {background-color: #F5EEA4}
-.Poor {background-color: #F5C5A4}
+.Top {background-color: #A4F5A4;
+			padding: 3px
+}
+.Great {background-color: #D3F5A4;
+			padding: 3px
+}
+.Good {background-color: #E9F5A4;
+			padding: 3px
+}
+.Ok {background-color: #F5EEA4;
+			padding: 3px
+}
+.Poor {background-color: #F5C5A4;
+			padding: 3px
+}
+
 
 table.dataTable thead th,
 table.dataTable thead td {
@@ -17,21 +28,21 @@ border-bottom: 1px solid #CFCFCF
 }
 table.dataTable tr:hover {background-color: #D2D6EA;}
 
-a:link {
-color: #3A3A3A;
-background-color: transparent;
-text-decoration: none;
-font-weight: bold
-}
+	table.dataTable a:link {
+	color: #3A3A3A;
+	background-color: transparent;
+	text-decoration: none;
+	font-weight: bold
+	}
 
-a:visited {
-color: #3A3A3A;
-background-color: transparent;
-text-decoration: none;
-}
+	table.dataTable a:visited {
+	color: #3A3A3A;
+	background-color: transparent;
+	text-decoration: none;
+	}
 
-a:hover {
-color: #858585;
-background-color: transparent;
-text-decoration: underline;
-}
+	table.dataTable a:hover {
+	color: #858585;
+	background-color: transparent;
+	text-decoration: underline;
+	}
