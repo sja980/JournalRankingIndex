@@ -14,7 +14,7 @@ $(document).ready( function () {
 			initCollapsed: true},
 		dom: 'Plfrtip',
 		columnDefs: [
-			//One-way ordering for metrics so they match index//
+			//One-way ordering for ranking metrics so they match index//
 			{ orderSequence: ['desc'], targets: [3, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18] },
 			{ orderSequence: ['asc'], targets: [17] },
 
