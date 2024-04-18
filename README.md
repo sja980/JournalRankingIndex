@@ -9,3 +9,5 @@ Features beyond that provided by Datatables include:
   - Ranking metrics are distinguishable from classificatory metrics; journals are ordered by ranking metrics while classificatory metrics can be used to isolate a sub-set of journals to rank i.e. to rank only open-access journals.
 
 The current version is built for philosophy journals and the most prominent metrics used in the philosophical discipline. 
+
+Produced as part of the <a href="https://www.pjip.org/">Philosophy Journal Insight Project</a>.
