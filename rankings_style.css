@@ -1,6 +1,3 @@
-.center {
-	text-align: center
-}
 
 .Top {
 	background-color: #A4F5A4;
@@ -37,8 +34,8 @@ table.dataTable td {
 	border-bottom: 1px solid #CFCFCF
 }
 
-table.dataTable tr:hover {
-	background-color: #E6E8F0;
+table.dataTable tbody tr:hover {
+    background-color: #E6E8F0
 }
 
 table.dataTable a:link {
