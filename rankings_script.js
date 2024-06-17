@@ -1,5 +1,10 @@
 $(document).ready( function () {
 	var table = $('#myTable').DataTable({
+		initComplete: function (settings, json) {
+			$("div.hider").removeAttr('hidden');
+			$("div.lds-dual-ring").remove();
+			this.api().columns.adjust();
+    			},
 		layout: {
         		top1: 'searchPanes',
 			topEnd: null
@@ -19,7 +24,8 @@ $(document).ready( function () {
 			columns: [2, 4, 5, 6, 7],
 			orderable: false,
 			viewTotal: true,
-			initCollapsed: true},
+			initCollapsed: true,
+			layout: 'columns-5'},
 
 columnDefs: [
 
