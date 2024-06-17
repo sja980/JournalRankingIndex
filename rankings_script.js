@@ -10,11 +10,12 @@ $(document).ready( function () {
 			topEnd: null
     			},
 		order: [[8, 'desc']],
-			responsive: {
-		 		details: {
-					type: 'none'
-		 			}
+		
+		responsive: {
+			details: {
+				type: 'none'}
  				},
+		
 		"scrollY": "700px",
 		"scrollX": true,
 	 	"pageLength": 50,
@@ -39,10 +40,6 @@ columnDefs: [
 
 //formatting//
 		{className:"dt-body-center", targets:[0, 3] },
-
-//responsive table - selects which columns to show and which to put into the drop-down menu//
-		{className: "none", targets: [4, 5, 6, 7] },
-		{className: "all", targets: [0, 1, 2, 3, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18] },
 
 //SJR Rankings //
 {targets:[8], className:"dt-body-center",
