@@ -1,45 +1,116 @@
+// Data source as JSON Array
+const dataSet =  [
+	["","Example Journal 1","GNRL",8,"Standard","NOA","Inv.","NDIS",3.43,5.11,6.3,"81%",20,61,89,4.6,94.59,"2%",400  ],
+  	["","Example Journal 2","GNRL",41.5,"Standard","HYBD","Inv.","RTJA",2.74,4.13,5.5,"82%",39,78,87,4.64,96.58,"5%",200  ],
+  	["","Example Journal 3","GNRL",75.75,"Standard","HYBD","Inv.","RTJA",1.53,2.1,3.2,"66%",34,48,86,4.64,95.16,"10%",250  ],
+  	["","Example Journal 4","M&P",10,"SHort","HYBD","YBKR","RTJA",0.3,0.6,0.3,"22%",4,44,20,0.62,22.87,"50%",400  ]
+]
+
 $(document).ready( function () {
 	var table = $('#myTable').DataTable({
-		initComplete: function (settings, json) {
-			$("div.hider").removeAttr('hidden');
-			$("div.lds-dual-ring").remove();
-			this.api().columns.adjust();
-    			},
-		layout: {
-        		top1: 'searchPanes',
-			topEnd: null
-    			},
-		order: [[8, 'desc']],
-		
-		responsive: {
-			details: {
-				type: 'none'}
- 				},
-		
-		"scrollY": "700px",
-		"scrollX": true,
-	 	"pageLength": 50,
-		"lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
-		"processing": true,
-		searchPanes: {
-			columns: [2, 4, 5, 6, 7],
-			orderable: false,
-			viewTotal: true,
-			initCollapsed: true,
-			layout: 'columns-5'},
+columns: [
+	{ title: 'Rank',
+		className: 'all'
+	},
+	{ title: 'Journal Name (Linked)',
+		className: 'all'
+	},
+	{ title: 'Area',
+		className: 'all'
+	},
+	{ title: '4YAP',
+		className: 'all'
+	},
+	{ title: 'Paper Length',
+		className: 'none'
+	},
+	{ title: 'Open Access',
+		className: 'none'
+	},
+	{ title: 'Book Reviews',
+		className: 'none'
+	},
+	{ title: 'Discussions',
+		className: 'none'
+	},
+	{ title: 'SJR',
+		className: 'all'
+	},
+	{ title: 'SNIP',
+		className: 'all'
+	},
+	{ title: 'CiSc',
+		className: 'all'
+	},
+	{ title: 'CTE%',
+		className: 'all'
+	},
+	{ title: 'GSH5',
+		className: 'all'
+	},
+	{ title: 'SJRH',
+		className: 'all'
+	},
+	{ title: 'Leit',
+		className: 'all'
+	},
+	{ title: 'BrQu',
+		className: 'all'
+	},
+	{ title: 'BrAw',
+		className: 'all'
+	},
+	{ title: 'Acpt',
+		className: 'all'
+	},
+	{ title: 'Subs',
+		className: 'all'
+	},
+],
+
+data: dataSet,
+
+initComplete: function (settings, json) {
+	$("div.hider").removeAttr('hidden');
+	$("div.loaders").remove();
+	this.api().columns.adjust();
+},
+
+layout: {
+	top1: 'searchPanes',
+	topEnd: null
+	},
+order: [[8, 'desc']],
+
+responsive: {
+	details: {
+		type: 'none'}
+		},
+
+"scrollY": "700px",
+"scrollX": true,
+"pageLength": 50,
+"lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
+"processing": true,
+searchPanes: {
+	columns: [2, 4, 5, 6, 7],
+	orderable: false,
+	viewTotal: true,
+	initCollapsed: true,
+	layout: 'columns-5'},
 
 columnDefs: [
 
 //One way ordering for metrics so they match index (find a better solution?)//
-		{ orderSequence: ['desc'], targets: [3, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18] },
-		{ orderSequence: ['asc'], targets: [17] },
+{ orderSequence: ['desc'], targets: [3, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18] },
+{ orderSequence: ['asc'], targets: [17] },
 
 //Set don't search and don't order columns//
-		{ searchable: false, targets: [0] },
-		{ orderable: false, targets: [0, 1, 2] },
+{ searchable: false, targets: [0] },
+{ orderable: false, targets: [0, 1, 2] },
 
 //formatting//
-		{className:"dt-body-center", targets:[0, 3] },
+{className:"dt-body-center", targets:[0, 3] },
 
 //SJR Rankings //
 {targets:[8], className:"dt-body-center",
