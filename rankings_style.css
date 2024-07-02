@@ -66,41 +66,63 @@ table.dataTable.maintable tbody tr > .sorting_3 {
 	background-color: #E6E8F0;
 }
 
-.lds-dual-ring {
-  color: #1c4c5b
-}
-.lds-dual-ring,
-.lds-dual-ring:after {
-  box-sizing: border-box;
-}
-.lds-dual-ring {
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-}
-.lds-dual-ring:after {
-  content: " ";
-  display: block;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
-  border-radius: 50%;
-  border: 6.4px solid currentColor;
-  border-color: currentColor transparent currentColor transparent;
-  animation: lds-dual-ring 1.2s linear infinite;
-}
-@keyframes lds-dual-ring {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .hider {
 	padding: 0;
 	margin: 0;
 	width: 100%;
+}
+
+/* Skeletal Loaders */
+
+.skelbox {
+  margin: 1rem;
+  min-height: 4rem;
+  border-radius: 4px;
+	background-color: #ededed;
+}
+
+.skelbox1 {
+  margin: 1rem;
+  min-height: 2rem;
+  border-radius: 4px;
+  animation-delay: .06s;
+	background-color: #ededed;
+}
+
+/* Loading spinner*/
+.spinner {
+   width: 56px;
+   height: 56px;
+   display: grid;
+   border: 4.5px solid #0000;
+   border-radius: 50%;
+   border-right-color: #3f3f3f;
+   animation: spinner-a4dj62 1s infinite linear;
+   margin: 3rem auto 3rem auto;
+}
+
+.spinner::before,
+.spinner::after {
+   content: "";
+   grid-area: 1/1;
+   margin: 2.2px;
+   border: inherit;
+   border-radius: 50%;
+   animation: spinner-a4dj62 2s infinite;
+}
+
+.spinner::after {
+   margin: 8.9px;
+   animation-duration: 3s;
+}
+
+@keyframes spinner-a4dj62 {
+   100% {
+      transform: rotate(1turn);
+   }
+}
+
+.loaders {
+	margin: 2rem 0 30rem 0;
 }
 
