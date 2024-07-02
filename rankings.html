@@ -11,128 +11,20 @@
 <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.0.7/b-3.0.2/b-html5-3.0.2/r-3.0.2/sb-1.7.1/sp-2.3.1/sl-2.0.1/datatables.min.js"></script>
 <script src="rankings_script.js"></script>
 
-<div class="lds-dual-ring"></div>
+<div class="loaders">
+	<div class="skelbox"></div>
+	<div class="skelbox1"></div>
+	<div class="skelbox1"></div>
+	<div class="spinner"></div>
+	<h3 style="text-align:center; font-family:'Montserrat'; color:#2f2f2f; letter-spacing: 3px; font-size:100%">&nbsp;&nbsp;&nbsp;Loading...</h3>
+	<div class="skelbox1"></div>
+	<div class="skelbox1"></div>
+	<div class="skelbox1"></div>
+</div>
 
 <div class="hider" hidden>
-<table id="myTable" style="width:100%" class="maintable">
-	<thead>
-		<tr>
-			<th class="all">Rank</th>
-			<th class="all">Journal Name (Linked)</th>
-			<th class="all">Area</th>
-			<th class="all">4YAP</th>
-			<th class="none">Paper Length</th>
-			<th class="none">Open Access</th>
-			<th class="none">Book Reviews</th>
-			<th class="none">Discussions</th>
-			<th class="all">SJR</th>
-			<th class="all">SNIP</th>
-			<th class="all">CiSc</th>
-			<th class="all">CTE%</th>
-			<th class="all">GSH5</th>
-			<th class="all">SJRH</th>
-			<th class="all">Leit</th>
-			<th class="all">BrQu</th>
-			<th class="all">BrAw</th>
-			<th class="all">Acpt</th>
-			<th class="all">Subs</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td></td>
-			<td>
-			<a href="https://pjip.org" target="_blank" rel="noopener noreferrer">Example Journal 1</a>
-			</td>
-			<td>GNRL</td>
-			<td>8</td>
-			<td>Standard</td>
-			<td>NOA</td>
-			<td>Inv.</td>
-			<td>NDIS</td>
-			<td>3.43</td>
-			<td>5.11</td>
-			<td>6.3</td>
-			<td>81%</td>
-			<td>20</td>
-			<td>61</td>
-			<td>89</td>
-			<td>4.6</td>
-			<td>94.59</td>
-			<td>2%</td>
-			<td>400</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>
-			<a href="https://pjip.org" target="_blank" rel="noopener noreferrer">Example Journal 2</a>
-			</td>
-			<td>GNRL</td>
-			<td>41.5</td>
-			<td>Standard</td>
-			<td>HYBD</td>
-			<td>Inv.</td>
-			<td>RTJA</td>
-			<td>2.74</td>
-			<td>4.13</td>
-			<td>5.5</td>
-			<td>82%</td>
-			<td>39</td>
-			<td>78</td>
-			<td>87</td>
-			<td>4.64</td>
-			<td>96.58</td>
-			<td>5%</td>
-			<td>200</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>
-			<a href="https://pjip.org" target="_blank" rel="noopener noreferrer">Example Journal 3</a>
-			</td>
-			<td>GNRL</td>
-			<td>75.75</td>
-			<td>Standard</td>
-			<td>HYBD</td>
-			<td>Inv.</td>
-			<td>RTJA</td>
-			<td>1.53</td>
-			<td>2.1</td>
-			<td>3.2</td>
-			<td>66%</td>
-			<td>34</td>
-			<td>48</td>
-			<td>86</td>
-			<td>4.64</td>
-			<td>95.16</td>
-			<td>10%</td>
-			<td>250</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>
-			<a href="https://pjip.org" target="_blank" rel="noopener noreferrer">Example Journal 4</a>
-			</td>
-			<td>M&P</td>
-			<td>10</td>
-			<td>SHort</td>
-			<td>HYBD</td>
-			<td>YBKR</td>
-			<td>RTJA</td>
-			<td>0.3</td>
-			<td>0.6</td>
-			<td>0.3</td>
-			<td>22%</td>
-			<td>4</td>
-			<td>44</td>
-			<td>20</td>
-			<td>0.62</td>
-			<td>22.87</td>
-			<td>50%</td>
-			<td>400</td>
-		</tr>
-	</tbody>
-</table>
+<table id="myTable" style="width:100%" class="maintable"></table>
 </div>
+
 </body>
 </html>
