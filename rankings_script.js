@@ -283,7 +283,6 @@ return "<div class='Poor'>"+ data +"</div>";}
 return data }},
 
 ]}
-);
 
 var deeplink = $.fn.dataTable.ext.deepLink( [ 'search.search', 'order', 'displayStart', 'searchCols'] );
 
