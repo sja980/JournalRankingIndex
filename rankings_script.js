@@ -6,8 +6,8 @@ const dataSet =  [
   	["","Example Journal 4","M&P",10,"SHort","HYBD","YBKR","RTJA",0.3,0.6,0.3,"22%",4,44,20,0.62,22.87,"50%",400  ]
 ]
 
-$(document).ready( function () {
-	var table = $('#myTable').DataTable({
+var options = {
+	
 columns: [
 	{ title: 'Rank',
 		className: 'all'
@@ -285,7 +285,13 @@ return data }},
 ]}
 );
 
+var deeplink = $.fn.dataTable.ext.deepLink( [ 'search.search', 'order', 'displayStart', 'searchCols'] );
 
+var config = $.extend(options, deeplink)
+
+$(document).ready( function () {
+var table =	$('#myTable').DataTable(config);
+	
 //adding incremental values to index column//
 table
     .on('order.dt search.dt', function () {
