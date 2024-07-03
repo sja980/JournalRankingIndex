@@ -1,0 +1,127 @@
+
+.Top {
+	background-color: #A4F5A4;
+	padding: 3px
+}
+
+.Great {
+	background-color: #D3F5A4;
+	padding: 3px
+}
+
+.Good {
+	background-color: #E9F5A4;
+	padding: 3px
+}
+
+.Ok {
+	background-color: #F5EEA4;
+	padding: 3px
+}
+
+.Poor {
+	background-color: #F5C5A4;
+	padding: 3px
+}
+
+table.dataTable thead th,
+table.dataTable thead td {
+	padding: 3px 3px;
+	border-bottom: 1px solid #111;
+}
+
+table.dataTable td {
+	border-bottom: 1px solid #CFCFCF
+}
+
+table.dataTable tbody tr:hover {
+    background-color: #E6E8F0
+}
+
+table.dataTable a:link {
+	color: #3A3A3A;
+	background-color: transparent;
+	text-decoration: none;
+	font-weight: bold
+}
+
+table.dataTable a:visited {
+	color: #3A3A3A;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+table.dataTable a:hover {
+	color: #858585;
+	background-color: transparent;
+	text-decoration: underline;
+}
+
+table.dataTable.order-column tbody tr > .sorting_1,
+table.dataTable.order-column tbody tr > .sorting_2,
+table.dataTable.order-column tbody tr > .sorting_3,
+table.dataTable.maintable tbody tr > .sorting_1,
+table.dataTable.maintable tbody tr > .sorting_2,
+table.dataTable.maintable tbody tr > .sorting_3 {
+	background-color: #E6E8F0;
+}
+
+.hider {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+/* Skeletal Loaders */
+
+.skelbox {
+  margin: 1rem;
+  min-height: 4rem;
+  border-radius: 4px;
+	background-color: #ededed;
+}
+
+.skelbox1 {
+  margin: 1rem;
+  min-height: 2rem;
+  border-radius: 4px;
+  animation-delay: .06s;
+	background-color: #ededed;
+}
+
+/* Loading spinner*/
+.spinner {
+   width: 56px;
+   height: 56px;
+   display: grid;
+   border: 4.5px solid #0000;
+   border-radius: 50%;
+   border-right-color: #3f3f3f;
+   animation: spinner-a4dj62 1s infinite linear;
+   margin: 3rem auto 3rem auto;
+}
+
+.spinner::before,
+.spinner::after {
+   content: "";
+   grid-area: 1/1;
+   margin: 2.2px;
+   border: inherit;
+   border-radius: 50%;
+   animation: spinner-a4dj62 2s infinite;
+}
+
+.spinner::after {
+   margin: 8.9px;
+   animation-duration: 3s;
+}
+
+@keyframes spinner-a4dj62 {
+   100% {
+      transform: rotate(1turn);
+   }
+}
+
+.loaders {
+	margin: 2rem 0 30rem 0;
+}
