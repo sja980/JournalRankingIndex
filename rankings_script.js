@@ -6,6 +6,8 @@ const dataSet =  [
   	["","Example Journal 4","M&P",10,"SHort","HYBD","YBKR","RTJA",0.3,0.6,0.3,"22%",4,44,20,0.62,22.87,"50%",400  ]
 ]
 
+var emptystringtobottom = DataTable.absoluteOrderNumber( { value: '', position: 'bottom' } );
+
 var options = {
 	
 columns: [
@@ -280,6 +282,41 @@ return "<div class='Ok'>"+ data +"</div>";}
 
 else if ((parseFloat(data)>=0) && ((parseFloat(data)<60))){
 return "<div class='Poor'>"+ data +"</div>";}
+return data }},
+
+// Acpt% //
+{targets:[17], type: emptystringtobottom,
+render: function(data){
+if(parseFloat(data)>=40){
+return "<div class='Poor'>"+ data +"</div>";}
+
+else if ((parseFloat(data)>=20) && ((parseFloat(data)<40))){
+return "<div class='Ok'>"+ data +"</div>";}
+
+else if ((parseFloat(data)>=10) && ((parseFloat(data)<20))){
+return "<div class='Good'>"+ data +"</div>";}
+
+else if ((parseFloat(data)>=5) && ((parseFloat(data)<10))){
+return "<div class='Great'>"+ data +"</div>";}
+
+else if ((parseFloat(data)>=0) && ((parseFloat(data)<5))){
+return "<div class='Top'>"+ data +"</div>";}
+return data }},
+
+// Subs //
+{targets:[18],
+render: function(data){
+if(parseFloat(data)>=600){
+return "<div class='Top'>"+ data +"</div>";}
+
+else if ((parseFloat(data)>=200) && ((parseFloat(data)<600))){
+return "<div class='Great'>"+ data +"</div>";}
+
+else if ((parseFloat(data)>=100) && ((parseFloat(data)<200))){
+return "<div class='Good'>"+ data +"</div>";}
+
+else if ((parseFloat(data)>=0) && ((parseFloat(data)<100))){
+return "<div class='Ok'>"+ data +"</div>";}
 return data }},
 
 ]}
