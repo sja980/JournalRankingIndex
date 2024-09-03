@@ -79,27 +79,32 @@ initComplete: function (settings, json) {
 },
 
 layout: {
-	top1: 'searchPanes',
-	topEnd: null
-	},
-order: [[8, 'desc']],
+	bottom2: 'searchPanes',
+},
 
 responsive: {
 	details: {
-		type: 'none'}
-		},
+		type: 'column',
+		target: 'none',
+	}
+},
+	
+searchPanes: {
+	columns: [4, 5, 6, 7],
+	orderable: false,
+	viewTotal: true,
+	initCollapsed: true,
+	layout: 'columns-4'
+},
 
+searchDelay: 500,
+order: [[8, 'desc']],
 "scrollY": "700px",
 "scrollX": true,
 "pageLength": 50,
 "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
 "processing": true,
-searchPanes: {
-	columns: [2, 4, 5, 6, 7],
-	orderable: false,
-	viewTotal: true,
-	initCollapsed: true,
-	layout: 'columns-5'},
+
 
 columnDefs: [
 
@@ -109,13 +114,13 @@ columnDefs: [
 
 //Set don't search and don't order columns//
 { searchable: false, targets: [0] },
-{ orderable: false, targets: [0, 1, 2] },
+{ orderable: false, targets: [0, 1, 2, 4, 5, 6, 7] },
 
 //formatting//
-{className:"dt-body-center", targets:[0, 3] },
+{ className:"dt-body-center", targets:[0, 2, 3, 4, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18] },
 
 //SJR Rankings //
-{targets:[8], className:"dt-body-center",
+{targets:[8],
 render: function(data){
 if(parseFloat(data)>=2){
 return "<div class='Top'>"+ data +"</div>";}
@@ -153,7 +158,7 @@ return "<div class='Poor'>"+ data +"</div>";}
 return data }},
 
 // CiSC //
-{targets:[10], className:"dt-body-center",
+{targets:[10],
 render: function(data){
 if(parseFloat(data)>=4){
 return "<div class='Top'>"+ data +"</div>";}
@@ -172,7 +177,7 @@ return "<div class='Poor'>"+ data +"</div>";}
 return data }},
 
 // CTE% //
-{targets:[11], className:"dt-body-center",
+{targets:[11],
 render: function(data){
 if(parseFloat(data)>=80){
 return "<div class='Top'>"+ data +"</div>";}
@@ -191,7 +196,7 @@ return "<div class='Poor'>"+ data +"</div>";}
 return data }},
 
 // GSH5 //
-{targets:[12], className:"dt-body-center",
+{targets:[12],
 render: function(data){
 if(parseFloat(data)>=30){
 return "<div class='Top'>"+ data +"</div>";}
@@ -210,7 +215,7 @@ return "<div class='Poor'>"+ data +"</div>";}
 return data }},
 
 // SJRH //
-{targets:[13], className:"dt-body-center",
+{targets:[13],
 render: function(data){
 if(parseFloat(data)>=70){
 return "<div class='Top'>"+ data +"</div>";}
@@ -230,7 +235,7 @@ return data }},
 
 
 // Letier //
-{targets:[14], className:"dt-body-center",
+{targets:[14],
 render: function(data){
 if(parseFloat(data)>=80){
 return "<div class='Top'>"+ data +"</div>";}
@@ -247,7 +252,7 @@ return "<div class='Ok'>"+ data +"</div>";}
 return data }},
 
 // dBQu //
-{targets:[15], className:"dt-body-center",
+{targets:[15],
 render: function(data){
 if(parseFloat(data)>=4.5){
 return "<div class='Top'>"+ data +"</div>";}
@@ -266,7 +271,7 @@ return "<div class='Poor'>"+ data +"</div>";}
 return data }},
 
 // dBAw //
-{targets:[16], className:"dt-body-center",
+{targets:[16],
 render: function(data){
 if(parseFloat(data)>=95){
 return "<div class='Top'>"+ data +"</div>";}
@@ -326,7 +331,7 @@ var deeplink = $.fn.dataTable.ext.deepLink( [ 'search.search', 'order', 'display
 var config = $.extend(options, deeplink)
 
 $(document).ready( function () {
-var table =	$('#myTable').DataTable(config);
+	const table = $('#myTable').DataTable(config);
 	
 //adding incremental values to index column//
 table
