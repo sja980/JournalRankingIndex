@@ -1,25 +1,25 @@
-.Top, .Great, .Good, .Ok, .Poor {
+.topfive, .QOne, .QTwo, .QThree, .QFour {
 	padding: 3px;
 	border-radius: 5px;
 }
 
-.Top {
+.topfive {
 	background-color: #A4F5A4;
 }
 
-.Great {
+.QOne {
 	background-color: #D3F5A4;
 }
 
-.Good {
+.QTwo {
 	background-color: #E9F5A4;
 }
 
-.Ok {
+.QThree {
 	background-color: #F5EEA4;
 }
 
-.Poor {
+.QFour {
 	background-color: #F5C5A4;
 }
 
