@@ -3,7 +3,7 @@ const dataSet =  [
 	["","Example Journal 1","GNRL",8,"Standard","NOA","Inv.","NDIS",3.43,5.11,6.3,"81%",20,61,89,4.6,94.59,"2%",400  ],
   	["","Example Journal 2","GNRL",41.5,"Standard","HYBD","Inv.","RTJA",2.74,4.13,5.5,"82%",39,78,87,4.64,96.58,"5%",200  ],
   	["","Example Journal 3","GNRL",75.75,"Standard","HYBD","Inv.","RTJA",1.53,2.1,3.2,"66%",34,48,86,4.64,95.16,"10%",250  ],
-  	["","Example Journal 4","M&P",10,"SHort","HYBD","YBKR","RTJA",0.3,0.6,0.3,"22%",4,44,20,0.62,22.87,"50%",400  ]
+  	["","Example Journal 4","M&P",10,"Short","HYBD","YBKR","RTJA",0.3,0.6,0.3,"22%",4,44,20,0.62,22.87,"50%",400  ]
 ]
 
 var emptystringtobottom = DataTable.absoluteOrderNumber( { value: '', position: 'bottom' } );
