@@ -99,9 +99,7 @@ searchPanes: {
 
 searchDelay: 500,
 order: [[8, 'desc']],
-"scrollY": "700px",
-"scrollX": true,
-"pageLength": 50,
+"pageLength": 25,
 "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
 "processing": true,
 
